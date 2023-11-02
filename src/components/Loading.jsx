@@ -1,7 +1,9 @@
 import { setCurrentComponent } from "../quizSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import generateQuestions from "../openaiClient"
+import "./Loading.css"
 
 export default function Loading() {
     const dispatch = useDispatch(); 
@@ -28,7 +30,8 @@ export default function Loading() {
 
     return (
         <>
-            generating questions
+            <h1 className="loading-title">Generating questions..</h1>
+            <Spinner></Spinner>
         </>
     );
 }
