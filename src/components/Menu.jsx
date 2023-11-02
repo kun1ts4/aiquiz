@@ -15,7 +15,7 @@ export default function Menu() {
   );
 
   const handleSubmit = () => {
-    dispatch(setCurrentComponent("LOADING"));
+    dispatch(setCurrentComponent("CARD"));
     console.log(topic + numberOfQuestions);
   };
 

@@ -1,16 +1,15 @@
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
   
-.Spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
-  
-.Spinner {
-    width: 100px;
-    height: 100px;
+
+.loading-title {
+  text-align: center;
 }

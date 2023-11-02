@@ -2,7 +2,7 @@ import { Button, Card, ProgressBar } from "react-bootstrap";
 import "./Question.css";
 import { questions } from "./questions";
 import { useSelector, useDispatch } from "react-redux";
-import { nextQuestion, setCurrentComponent } from "../quizSlice";
+import { correctAnswer, nextQuestion, setCurrentComponent } from "../quizSlice";
 import React, { useState } from "react";
 
 export default function Question() {
@@ -26,7 +26,7 @@ export default function Question() {
   const [buttonVariants, setButtonVariants] = useState(0);
   const selectAnswer = (number) => {
     if (answers[number] == correct) {
-      console.log("congrats");
+      dispatch(correctAnswer())
       //setButtonVariants();
     } else {
       console.log("bad(");

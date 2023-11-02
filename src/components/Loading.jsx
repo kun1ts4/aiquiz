@@ -29,9 +29,9 @@ export default function Loading() {
     }, [dispatch]);
 
     return (
-        <>
-            <h1 className="loading-title">Generating questions..</h1>
+        <div className="loading-container">
+            <h1 className="loading-title">Generating questions</h1>
             <Spinner></Spinner>
-        </>
+        </div>
     );
 }

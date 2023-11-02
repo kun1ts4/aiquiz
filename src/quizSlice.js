@@ -8,6 +8,7 @@ export const quizSlice = createSlice({
     currentComponent: "MENU",
     currentQuestionNumber: 0,
     questions: [],
+    correctAnswers: 0,
   },
   reducers: {
     setQuizTopic: (state, action) => {
@@ -25,6 +26,9 @@ export const quizSlice = createSlice({
     setQuestions: (state, action) => {
       state.questions = action.payload;
     },
+    correctAnswer: (state) => {
+      state.correctAnswers++;
+    },
   },
 });
 
@@ -34,6 +38,7 @@ export const {
   setCurrentComponent,
   nextQuestion,
   setQuestions,
+  correctAnswer,
 } = quizSlice.actions;
 
 export default quizSlice.reducer;
