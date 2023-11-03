@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 export default function App() {
   
   const currentComponent = useSelector((state) => state.quiz.currentComponent);
-
+  console.log(process.env.OPENAI_KEY);
   return (
     <div className="App">
       {currentComponent === "MENU" ? (
