@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import generateQuestions from "../openaiClient"
 import "./Loading.css"
+import { setQuestions } from "../quizSlice";
 
 export default function Loading() {
     const dispatch = useDispatch(); 
@@ -30,7 +31,7 @@ export default function Loading() {
 
     return (
         <div className="loading-container">
-            <h1 className="loading-title">Generating questions</h1>
+            <h1 className="loading-title">Генерация вопросов</h1>
             <Spinner></Spinner>
         </div>
     );

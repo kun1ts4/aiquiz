@@ -10,16 +10,16 @@ export default function Result() {
     <div className="Result">
       <Card data-bs-theme="dark">
         <Card.Header>
-          <Card.Title>Your result</Card.Title>
+          <Card.Title>Результат</Card.Title>
         </Card.Header>
         <Card.Body>
           <Card.Text>
-            Correct answers:<Card.Title>{correct}</Card.Title>
+            Верные ответы:<Card.Title>{correct}</Card.Title>
           </Card.Text>
           <Card.Text>
-            Incorrect answers:<Card.Title>{total - correct}</Card.Title>
+            Ошибки:<Card.Title>{total - correct}</Card.Title>
           </Card.Text>
-          <Button href="">← Main</Button>
+          <Button href="/">← Main</Button>
         </Card.Body>
       </Card>
     </div>

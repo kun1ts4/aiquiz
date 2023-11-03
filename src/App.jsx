@@ -22,7 +22,11 @@ export default function App() {
         <Result />
       ) : null}
       <footer>
-        <span>footer text</span>
+        <div>
+          <div>
+            <p className="gh-link">GitHub: <a href="https://github.com/ulemisty/aiquiz">ulemisty</a></p>
+          </div>
+        </div>
       </footer>
     </div>
   );

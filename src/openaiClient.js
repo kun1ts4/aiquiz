@@ -1,9 +1,8 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: "7332e55b-525f-4a5d-b0ee-ddad771a58b7" ,
+  apiKey: "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" ,
   dangerouslyAllowBrowser: true ,
-  //baseURL: "https://api.pawan.krd/v1",
 });
 
 const generateQuestions = async (topic, language, number) => {
@@ -21,18 +20,15 @@ const generateQuestions = async (topic, language, number) => {
     ],
     temperature: 0.7,
     max_tokens: 256,
-    n: number,
+    n: Number(number),
   });
   const generatedQuestions = response.choices.map((choice) => {
     const questionJSON = JSON.parse(choice.message.content);
     return questionJSON;
   });
 
-  console.log(generatedQuestions);
+  //console.log(generatedQuestions);
   return generatedQuestions;
 };
-
-generateQuestions("birds", "rusian",1)
-
 
 export default generateQuestions;

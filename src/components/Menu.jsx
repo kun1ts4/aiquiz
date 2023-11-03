@@ -15,16 +15,17 @@ export default function Menu() {
   );
 
   const handleSubmit = () => {
-    dispatch(setCurrentComponent("CARD"));
+    dispatch(setCurrentComponent("LOADING"));
     console.log(topic + numberOfQuestions);
   };
 
   return (
     <div className="Menu">
-      <h1>Welcome</h1>
+  
+      <h1>AIquiz</h1>
       <Form className="topicForm" data-bs-theme="dark">
         <Form.Group className="topicInput">
-          <Form.Label variant="secondary">Topic</Form.Label>
+          <Form.Label variant="secondary">Тема</Form.Label>
           <Form.Control
             tupe="input"
             value={topic}
@@ -34,7 +35,7 @@ export default function Menu() {
           />
         </Form.Group>
         <Form.Group className="numberOfQuestionsInput">
-          <Form.Label>Number of questions</Form.Label>
+          <Form.Label>Количество вопросов</Form.Label>
           <Form.Range
             min={1}
             max={10}
@@ -54,7 +55,7 @@ export default function Menu() {
           data-bs-theme="dark"
           onClick={() => handleSubmit()}
         >
-          Submit
+          Начать
         </Button>
       </Form>
     </div>

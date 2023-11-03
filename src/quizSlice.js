@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const quizSlice = createSlice({
   name: "quiz",
   initialState: {
-    topic: "nothing",
+    topic: "",
     numberOfQuestions: 8,
     currentComponent: "MENU",
     currentQuestionNumber: 0,
